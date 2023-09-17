@@ -374,20 +374,20 @@ export class MovieComponent implements OnInit {
     }
   }
 
-  searchallMovies(movieTitle: string) {
-    if (movieTitle == '') {
-      this.allMovies = this.allData;
-    } else {
-      this.allMovies = this.allMovies.filter((movie) => {
-        if (
-          movie.title
-            .toLocaleLowerCase()
-            .includes(movieTitle.toLocaleLowerCase())
-        ) {
-          return movie;
-        }
-      });
-    }
+searchallMovies(movieTitle: string) {
+  if (movieTitle == '') {
+    this.allMovies = this.allData;
+  } else {
+    this.allMovies = this.allMovies.filter((movie) => {
+      if (
+        movie.title
+          .toLocaleLowerCase()
+          .includes(movieTitle.toLocaleLowerCase())
+      ) {
+        return movie;
+      }
+    });
   }
+}
 
 }
